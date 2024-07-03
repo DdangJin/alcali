@@ -6,7 +6,7 @@ RUN apt-get update && \
   apt-get install -y -o DPkg::Options::=--force-confold curl netcat
 
 # Install Latest Salt from the stable Branch
-RUN curl -L https://bootstrap.saltstack.com | sh -s -- -D -r -P stable 3006.7
+RUN curl -L https://bootstrap.saltstack.com | sh -s -- -X stable 3006
 
 # Set master
 COPY saltconfig/etc/minion /etc/salt/minion
